@@ -1,0 +1,24 @@
+{
+  "name": "captcha-kit-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Modular, open-source CAPTCHA toolkit (codename: Capsule)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "eslint": "^9.9.0",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.9.3",
+    "vitest": "^2.0.5"
+  },
+  "license": "MIT"
+}
