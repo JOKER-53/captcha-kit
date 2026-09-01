@@ -1,15 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "declaration": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "rootDir": "src"
-  },
-  "exclude": ["node_modules", "dist", "examples"]
+  "files": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/image-select" },
+    { "path": "./packages/math" },
+    { "path": "./packages/odd-one-out" },
+    { "path": "./packages/rotate" },
+    { "path": "./packages/slider" },
+    { "path": "./packages/text" }
+  ]
 }
