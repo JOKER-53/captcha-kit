@@ -8,14 +8,17 @@ import type { ChallengeStore, StoredChallenge } from "./challenge.js";
 export class MemoryChallengeStore implements ChallengeStore {
   private store = new Map<string, StoredChallenge>();
 
-  async set(token: string, data: StoredChallenge, ttlMs: number): Promise<void> {
+  async set(token: string, data: StoredChallenge): Promise<void> {
     this.store.set(token, data);
-    const timer = setTimeout(() => this.store.delete(token), ttlMs) as unknown as { unref?: () => void };
-    timer.unref?.();
   }
 
   async get(token: string): Promise<StoredChallenge | null> {
-    return this.store.get(token) ?? null;
+    const entry = this.store.get(token) ?? null;
+    if (entry && Date.now() > entry.expiresAt) {
+      this.store.delete(token);
+      return entry; // still return it so validate() can report "expired" (not "invalid_token")
+    }
+    return entry;
   }
 
   async delete(token: string): Promise<void> {

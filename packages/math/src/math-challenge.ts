@@ -32,7 +32,7 @@ export class MathChallenge implements Challenge<number> {
     const token = generateToken();
     const expiry = expiresAt(ttlMs);
 
-    await this.store.set(token, { type: this.type, answer, expiresAt: expiry, attempts: 0 }, ttlMs);
+    await this.store.set(token, { type: this.type, answer, expiresAt: expiry, attempts: 0 });
 
     return {
       token,

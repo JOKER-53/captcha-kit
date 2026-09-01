@@ -44,7 +44,13 @@ export interface Challenge<TAnswer = unknown> {
  * in-memory, Redis, DB-backed, etc.
  */
 export interface ChallengeStore {
-  set(token: string, data: StoredChallenge, ttlMs: number): Promise<void>;
+  /**
+   * Persist challenge state. `data.expiresAt` carries the logical expiry —
+   * implementations that support native TTL (e.g. Redis) should also set a
+   * physical TTL close to `data.expiresAt - Date.now()` for cleanup, but
+   * expiry correctness must not depend on that alone (see isExpired()).
+   */
+  set(token: string, data: StoredChallenge): Promise<void>;
   get(token: string): Promise<StoredChallenge | null>;
   delete(token: string): Promise<void>;
 }
