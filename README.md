@@ -35,7 +35,7 @@ Most open-source CAPTCHA libraries force you into one challenge type. **captcha-
 | `drag-drop` | Drag items to correct categories | Medium–High |
 | `behavioral` | Mouse movement, timing, fingerprinting | High |
 
-> **Coming later:** a separate [Opposite/Reverse CAPTCHA](https://github.com/KADHIRAVANEG/opposite-captcha) project, built on the same core.
+> **Coming later:** a separate [Opposite/Reverse CAPTCHA](https://github.com/JOKER-53/opposite-captcha) project, built on the same core.
 
 ---
 
@@ -78,4 +78,4 @@ Found a vulnerability? Please **do not** open a public issue. See [SECURITY.md](
 
 ## License
 
-MIT © [KADHIRAVANEG](https://github.com/KADHIRAVANEG) — see [LICENSE.md](./LICENSE.md)
+MIT © [KADHIRAVANEG](https://github.com/JOKER-53) — see [LICENSE.md](./LICENSE.md)

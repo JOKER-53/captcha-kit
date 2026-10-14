@@ -18,7 +18,7 @@ Once a stable v1.0 is released, this table will be updated with a formal support
 Instead, report it privately using one of the following:
 
 - GitHub's [private vulnerability reporting](../../security/advisories/new) (preferred)
-- Email: security disclosures can be sent to the maintainer directly (see GitHub profile: [@KADHIRAVANEG](https://github.com/KADHIRAVANEG))
+- Email: security disclosures can be sent to the maintainer directly (see GitHub profile: [@JOKER-53](https://github.com/JOKER-53))
 
 Please include:
 
